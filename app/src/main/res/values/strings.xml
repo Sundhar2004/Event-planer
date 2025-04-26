@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Event Planner</string>
+    <string name="event_title">Event Title</string>
+    <string name="_10_00_am">10:00 AM</string>
+    <string name="description">Description</string>
 </resources>

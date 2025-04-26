@@ -4,10 +4,10 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "events")
-class EventPlanerModel (
+data class EventPlanerModel (
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val title: String,
     val description: String,
-    val date: Long,
+    val date: String,
     val time: String
     )
