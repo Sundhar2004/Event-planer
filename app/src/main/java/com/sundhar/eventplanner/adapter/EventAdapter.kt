@@ -30,10 +30,10 @@ class EventAdapter(private val onClick: (EventPlanerModel) -> Unit): RecyclerVie
 
     inner class EventViewHolder(val binding: EventListItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
+        @SuppressLint("SetTextI18n")
         fun bind(event: EventPlanerModel) {
             binding.title.text = event.title
-            binding.time.text = event.time
-
+            binding.time.text = event.time +" & "+ event.date
             binding.root.setOnClickListener {
                 onClick(event)
             }

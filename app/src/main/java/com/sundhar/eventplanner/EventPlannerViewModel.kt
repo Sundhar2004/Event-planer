@@ -19,9 +19,8 @@ import java.util.Locale
 class EventPlannerViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository: EventPlanerRepository
-
     private val selected_Date = MutableLiveData<String>()
-    val selectedDate: LiveData<String> = selected_Date
+
 
     val eventsByDate: LiveData<List<EventPlanerModel>>
     val allUpcomingEvents: LiveData<List<EventPlanerModel>>
@@ -31,6 +30,7 @@ class EventPlannerViewModel(application: Application) : AndroidViewModel(applica
         val eventDao = EventPlanerDatabase.getDatabase(application).eventDao()
         repository = EventPlanerRepository(eventDao)
         selected_Date.value = getTodayDate()
+
         eventsByDate = selected_Date.switchMap{ date ->
             repository.getEventsByDate(date)
         }

@@ -3,4 +3,8 @@
     <string name="event_title">Event Title</string>
     <string name="_10_00_am">10:00 AM</string>
     <string name="description">Description</string>
+    <string name="event_planer">Event planer</string>
+    <string name="upcoming_events">Events</string>
+    <string name="date_time">Date and Time</string>
+    <string name="select_date">Select Date</string>
 </resources>
